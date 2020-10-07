@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position - fixed</title>
+    <style>
+        body{
+            padding-top: 30px;
+        }
+        #parent, #other{
+            border: 5px solid tomato;
+        }
+        #me{
+            background-color: black;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            /*이렇게 offset을 설정할 경우 me 엘리먼트에 의해 다른 엘리먼트들이 가려지므로
+            height값을 설정하고 body태그에 padding을 height만큼 설정하면된다.*/
+            /*width, height가 없다면 absolute와 마찬가지로 부모-자식 링크가 끊겨
+            부모 태그의 값을 설정하기 어렵기 때문에 자기 content 만큼의 크기로 줄어든다.*/
+
+        }
+        #large{
+            height: 10000px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+<div id="other">other</div>
+<div id="parent">
+    parent
+    <div id="me">me</div>
+</div>
+<div id="large">large</div>
+</body>
+</html>

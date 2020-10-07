@@ -1,0 +1,25 @@
+/* 방문한 적이 없는 링크*/
+a:link{
+    color: blueviolet;
+}
+/* 방문한 적이 있는 링크*/
+a:visited{
+    color: antiquewhite;
+}
+/* 마우스를 클릭*/
+a:active{
+    color: red;
+}
+/* 마우스를 롤오버*/
+a:hover{
+    color: cornflowerblue;
+}
+/*Tab 키 눌러서 태그가 포커싱될 때
+가장 뒤에다 놓자*/
+a:focus{
+    color: white;
+}
+input:focus{
+    background-color: black;
+    color: white;
+}

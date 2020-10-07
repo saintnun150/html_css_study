@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position(relative vs static)</title>
+    <style>
+        html{
+            border: 1px solid gainsboro;
+        }
+        div{
+            border: 5px solid cadetblue;
+            margin: 10px;
+        }
+        #me{
+            position: relative; /*position이 없으면 top, left값이 무시되는데 기본적으로 element들은 default position으로 static을 갖고있다.*/
+            top: 100px;
+            left: 100px; /*기준점에서 어떠한 지점까지의 변위차를 offset이라고 부른다.*/
+            /*right: 100px;*/
+            /*bottom: 100px;*/
+            /*동일한 프로퍼티가 있을 때 left > right, top > bottom에 우선한다.*/
+
+        }
+    </style>
+</head>
+<body>
+<h1>position 값이 relative일 때 left, top과 같은 offset을 설정할 수 있다.</h1>
+<h1>relative는 부모에 대한 상대적인 위치이다. 지금은 id값이 parent인 div태그이다.</h1>
+<h1>하나의 element안에 left, right, top, bottom이 있으면 이 때 right, bottom값은 무시된다.</h1>
+<div id="other">other</div>
+<div id="parent">
+    parent
+    <div id="me">me</div>
+</div>
+</body>
+</html>

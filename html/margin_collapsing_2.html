@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마진겹침-2</title>
+    <style>
+        #parent{
+            /*border:1px solid tomato;*/
+            margin-top: 100px;
+        }
+        #child{
+            background-color: lime;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>부모태그와 자식태그의 마진겹침 현상<br>
+웹 페이지상에서 부모태그가 아무런 style없이 태그만 존재하는 상태가 되면 자식태그와 마진영역이 겹치게 된다.<br>
+부모태그와 자식태그의 동일한 마진 프로퍼티 중 더 큰 값을 공통의 프로퍼티 값으로 적용한다.<hr>
+현재 부모 마진탑 100, 자식이 50일 때 개발자도구에서도 자식의 값은 50으로 나오지만 부모의 마진값이 될 때까지 엘리먼트 위치는 변동하지 않는다.
+반대로 부모의 마진의 경우 자식값인 50미만부터 엘리먼트 위치가 변하기 시작한다. </h1>
+<div id="parent">
+    <div id="child">
+        Hello World
+    </div>
+</div>
+</body>
+</html>

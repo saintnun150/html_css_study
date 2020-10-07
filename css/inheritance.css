@@ -1,0 +1,23 @@
+/*
+상속 : 부모의 속성을 자식에서 물려받는 것이 효율적*/
+
+
+/*li{
+    color: red;
+}
+h1{
+    color: red;
+}*/
+html{
+    color: palevioletred;
+}
+/*css 속성마다 상속 가능한 것이 따로 있음
+확인 : https://www.w3.org/TR/CSS2/propidx.html
+*/
+body{
+    border: 1px solid palevioletred;
+}
+
+.japan_food{
+    color: black;
+}

@@ -1,0 +1,22 @@
+hr{
+    border: 2px dotted saddlebrown;
+}
+h1{
+    border: 1px solid rosybrown;
+}
+h1{
+    display: inline;
+}
+/*a{
+    display: block;
+}*/
+.d1{
+    display: block;
+}
+p,a{
+    border: 10px solid blueviolet;
+    padding: 20px;
+    margin: 40px;
+    width: 1000px;
+    /*height: 50px;*/
+}
