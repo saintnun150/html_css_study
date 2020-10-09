@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-1-basic</title>
+</head>
+<style>
+    .container{
+        background-color: powderblue;
+        height: 200px;
+        display: flex;
+        flex-direction: column-reverse; /*default : row (행의 방향으로 정렬시키겠다)*/
+    }
+    .item{
+        background-color: tomato;
+        color: aliceblue;
+        border: 1px solid aliceblue;
+    }
+
+</style>
+<body>
+<h3>레이아웃을 코드로 표현하기 위해서 많은 시도가 있었는데 table-position-float로 발전해오다가 지금에 와서는 flex가 탄생하였다.</h3>
+<h3>flex를 사용하기 위해선 container-item 태그 트리구조가 필요. 반드시 div태그나 container-item class가 아니라 이는 자식과 부모구조를 말한다</h3>
+<h3>flex 배치효과를 주기위해서 처음 해야할 단계는 부모태그의 display 속성값에 flex를 주는 것이다.</h3>
+<h3>flex의 중요한 특징은 각각의 화면의 전체를 다 쓴다.</h3>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+</body>
+</html>

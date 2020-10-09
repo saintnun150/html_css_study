@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>미디어쿼리-1</title>
+    <style>
+        @media (max-width: 600px) {
+            body{
+                background-color: green;
+                color:whitesmoke;
+            }
+        }
+        @media (max-width: 500px) {
+            body{
+                background-color: crimson;
+                color:whitesmoke;
+            }
+        }
+        @media (min-width:601px) {
+            body{
+                background-color: powderblue;
+            }
+        }
+    </style>
+</head>
+<body>
+<h3>@media(width:value) : 가로가 정확히 value 일 때 적용할 css</h3>
+<h3>@media(max-width:value) : 가로가 value 이하일 때 적용할 css, 즉 최대 width 값까지 적용한다는 뜻임</h3>
+<h3>@media(min-width:value) : 가로가 value 이상일 때 적용할 css, 즉 최소 width 값부터 적용한다는 뜻임</h3>
+<h3>위 @media 순서를 뒤바꿨을 경우 cascading에 의해서 아래 코드만 적용된다. 따라서 max-width value를 오름차순으로 정렬시켜야한다.</h3>
+</body>
+</html>

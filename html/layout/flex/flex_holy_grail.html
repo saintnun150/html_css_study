@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>flex_holy_grail_layout</title>
+    <style>
+        body{
+            display: flex;
+           /* align-items: center;*/
+            justify-content: center;
+            /*height: 500px;*/
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            border: 1px solid crimson;
+        }
+        header{
+            border-bottom: 1px solid crimson;
+            padding-left: 20px;
+        }
+        footer{
+            border-top: 1px solid crimson;
+            padding-left: 20px;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+        }
+        .content nav{
+            border-right: 1px solid crimson;
+        }
+        .content aside{
+            border-left: 1px solid crimson;
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            padding: 10px;
+        }
+        nav{
+            order: -1;
+        }
+        main{
+            order: 1;
+        }
+        aside{
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>탱구탱구 개발자 일기</h1>
+    </header>
+    <section class="content">
+        <main>
+            탱구탱구 개발자 일기는 개인 공부를 하며 프로그래밍에 대해 정리한 커뮤니티 입니다.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum maxime tempora velit veniam. Aliquid beatae dicta facere maiores minima neque, odio praesentium quaerat quas quidem quod rem rerum sapiente sequi tempore. Aliquid architecto asperiores dignissimos nobis praesentium quaerat quisquam sit vitae. Accusamus architecto at, consectetur deserunt doloremque ea eius enim eos eum fugiat iure nam nostrum perspiciatis quis sapiente. Amet animi dignissimos esse explicabo hic illo perferendis repellat vel. Aliquid!
+            <p/>
+            <p> flex상태에서 align-items가 동작하기 위해서는 반드시 height값이 지정되어야함</p>
+            <p>align_items : container 밑의 item 전체 정렬</p>
+            <p>align_content : 같은 row에 있는 element를 group으로 쳐서 group 사이의 정렬</p>
+        </main>
+        <nav>
+            <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>javascript</li>
+            </ul>
+        </nav>
+        <aside>
+            AD
+        </aside>
+    </section>
+    <footer>
+        <a href="https://tangoo91.tistory.com">홈페이지 이동</a>
+    </footer>
+</div>
+</body>
+</html>

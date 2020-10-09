@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-1-basic</title>
+</head>
+<style>
+    .container{
+        background-color: powderblue;
+        height: 200px;
+        display: flex;
+        flex-direction: row; /*default : row (행의 방향으로 정렬시키겠다)*/
+    }
+    .item{
+        background-color: tomato;
+        color: aliceblue;
+        border: 1px solid aliceblue;
+        flex-grow: 0;
+    }
+    /*2번째 item 클래스 선택*/
+    .item:nth-child(1){
+        flex-basis: 150px;
+        /*flex 기본 크기변경 속성 - flex 방향에 해당하는 element*/
+        /*flex-grow: 1;*/
+        /*특정 element가 더 여백을 채우고 싶을 때*/
+        /*즉 value를 더한 값이 분모가 되고 각각의 element value가 분자가 된다.
+        처음에는 1/5씩 가져갔지만 2번째 item에 2를 주는 순간 2번을 제외한 나머지는 1/6씩 나눠갖는다*/
+        flex-shrink: 0; /*1이상 값을 주면 다시 해당 element의 고통분담이 시작된다.*/
+    }
+    .item:nth-child(2){
+        flex-basis: 150px;
+        /*만약에 두 element에 각각의 shrink 값이 있다면 grow와 마찬가지로 해당 비율만큼 고통분담을 한다. */
+    }
+
+</style>
+<body>
+<h3>item의 부피를 제외한 나머지 여백으로 보이는 container를 채우려면 자식 태그에 flex grow 속성을 주면된다.
+이 때 각 여백를 item 클래스 엘리먼트들이 n분의 1(균등분배)한다.</h3>
+<h3>특정 element가 여백을 독점할 경우 해당 element의 grow 값이 1이든 100이든 동일하다.</h3>
+<h3>브라우저 창 크기를 임의로 줄일경우 더이상 여백이 없어지는 순간이 생긴다. 그 순간보다 작아지면 flex는
+    반응형으로 item들이 작아진다 그러나 1,3,4,5는 content를 제외한 나머지 여백이 없기때문에 작아지지 않지만
+    2의 경우 basis로 300px를 줬기 때문에 나머지 여백이 존재하므로 작아진다.
+</h3>
+<h3>즉, container보다 화면이 더 작아질 경우 여백이 있는 element에서 자동으로 여백을 줄이는 것이다.</h3>
+<h3>이런 상황에서 2번의 크기를 고정시키고 싶으면 shrink 속성값으로 0을 설정하자.</h3>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+</body>
+</html>

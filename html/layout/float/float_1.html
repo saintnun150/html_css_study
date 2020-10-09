@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float_1_basic</title>
+    <style>
+        img{
+            width: 300px;
+
+            float: right;
+            margin: 20px
+        }
+        p{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h3>float : 이미지 옆에 텍스트 배치하고 싶을 때 : 텍스트가 이미지를 피해가는 효과, 이미지를 따라 텍스트가 흐름</h3>
+<h3>피해가지 않았으면 좋겠으면 하는 element에게 clear:both; 값을 주면 이미지를 따라 흐르지 않고 block 상태처럼 보이게 됨<br>
+단, both의 경우 무조건 양쪽 적용이지만 이미지에 적용된 float value 값과 clear value값이 동일해야 적용한다. 그러나 귀찮기 때문에 그냥 both를 사용한다.</h3>
+<img src="../../../img/holy_grail_layout.png" alt="">
+<p>quam quia quidem quisquam quo quod quos reiciendis rem repellendus sint, soluta totam veritatis. Ab accusamus adipisci aliquam assumenda at expedita, fugiat id, ipsa labore magni nesciunt, repellendus sapiente unde!</p>
+<p style="clear: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolore eligendi expedita facilis illum impedit, ipsa labore, laborum laudantium maiores natus nesciunt nobis praesentium sequi temporibus tenetur voluptatem!</p>
+</body>
+</html>

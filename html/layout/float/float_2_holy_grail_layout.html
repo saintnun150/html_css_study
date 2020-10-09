@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float_holy_grail_layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 540px;
+            border: 1px solid gray;
+            margin: auto;
+        }
+        header {
+            border-bottom: 1px solid gray;
+        }
+
+        nav {
+            float: left;
+            width: 120px;
+            border-right: 1px solid gray;
+        }
+
+        article {
+            float: left;
+            width: 300px; /*nav를 제외한 나머지 영역에 float가 들어올 수 있어야 하기 때문에 width값을 줌*/
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            margin-left: -1px; /*이렇게 할 경우 nav와 article의 margin이 오버랩(겹침)이 되면서 선 겹침현상이 사라짐*/
+        }
+
+        aside {
+            float: left;
+            width: 120px;
+            border-left: 1px solid gray;
+            margin-left: -1px; /*이렇게 할 경우 nav와 article의 margin이 오버랩(겹침)이 되면서 선 겹침현상이 사라짐*/
+        }
+
+        footer {
+            clear: both;
+            border-top: 1px solid gray;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<h3>기본적으로 css box-model에서는 폭을 계산할 때 테두리를 포함시킨다. 따라서 aside의 폭은 120px이지만 테두리 1px까지 계산하여 개발자도구에서 해당 태그의 폭은 121px로 나온다.</h3>
+<div class="container">
+    <header>
+        <h1>CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>position</li>
+            <li>float</li>
+            <li>flex</li>
+        </ul>
+    </nav>
+    <article>
+        <h2>float</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias animi architecto commodi cumque
+        cupiditate, debitis delectus deserunt dicta eaque eius eligendi enim eos harum hic in incidunt inventore ipsum
+        iure
+        labore laboriosam maiores minima mollitia nobis non nulla qui quos recusandae sit suscipit tempora vel velit
+        vitae
+        voluptate.
+    </article>
+    <aside>
+        ad
+    </aside>
+    <footer>
+        copyright
+    </footer>
+</div>
+</body>
+
+</html>
