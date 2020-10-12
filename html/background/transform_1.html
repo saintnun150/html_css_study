@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform_1</title>
+    <style>
+        h4{
+            background-color: deepskyblue;
+            color: aliceblue;
+            display: inline-block; /*transform 효과가 적용되기 위해선 *block or inline-block일 때만 동작 */
+            padding: 5px;
+            font-style: 3rem;
+            margin: 100px;
+            /*transform:
+                    scaleX(0.5)
+                    scaleY(0.5); !*value : 배율*!
+            !*transform: scaleY(0.5); !*옆 처럼 다른 트랜스폼을 적용하면 위의 트랜스폼 효과가 제거된다. 따라서 한 프로퍼티여 연달아 적는다.*!*!*/
+            transform: scale(0.5,0.5); /*위와 같은 효과이다.*/
+        }
+        img:hover{
+            transform: skew(45deg, 45deg);
+            transition: all 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+<h4>transform : 어떤 엘리먼트의 크기, 회전, 뒤틀기 등을 말한다. https://opentutorials.org/module/2367/13684 참고</h4>
+<img src="../../img/london.jpg" alt="">
+</body>
+</html>

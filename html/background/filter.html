@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter</title>
+    <style>
+        img{
+            transition: all 1s;
+        }
+        img:hover {
+            -webkit-filter: grayscale(100%) blur(3px);; /*크롬, 사파리 vendor-prefix*/
+            -o-filter: grayscale(0%); /*오페라 vendor-prefix*/
+            filter: grayscale(100%) blur(3px); /*모든 브라우저에서 적용되었을 때*/
+        }
+        h1{
+            /*-webkit-filter: blur(3px);
+            -o-filter: blur(3px);
+            filter: blur(3px);*/
+        }
+    </style>
+</head>
+<body>
+<h3>
+    필터는 원본 이미지는 유지한 채 코드를 통해서 효과를 줌. 그 효과의 대상이 텍스트일 때는 선택, 복사, 검색 등의 조작을 할 수 있고
+    애니메이션과 조합했을 때는 필터를 통해 동적인 상태를 만들 수 있다는 중요한 목적이 있다.
+    https://codepen.io 에서 filter로 검색하면 필터로 만든 다양한 효과를 공부할 수 있다.
+</h3>
+<h1>런던</h1>
+<img src="../../img/london.jpg" alt="">
+</body>
+</html>
